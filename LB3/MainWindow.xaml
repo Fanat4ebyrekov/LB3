@@ -1,0 +1,108 @@
+﻿<Window x:Class="LB3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LB3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Menu
+            VerticalAlignment="Top"
+            Height="20"
+            Grid.Row="0"
+            BorderThickness="1"
+            Background="White">
+                <MenuItem
+                x:Name="menuItemChangeColor"
+                Click="menuItemChangeColor_Click"
+                Header="Change window color">
+                    <MenuItem
+                    x:Name="menuItemColorBlack"
+                    MouseEnter="menuItemColorBlack_MouseEnter"
+                    Click="menuItemColorBlack_Click"
+                    Header="Black"/>
+                    <MenuItem
+                    x:Name="menuItemColorGreen"
+                    Click="menuItemColorGreen_Click"
+                    MouseEnter="menuItemColorGreen_MouseEnter"
+                    Header="Green"/>
+                    <MenuItem
+                    x:Name="menuItemColorOrange"
+                    Click="menuItemColorOrange_Click"
+                        MouseEnter="menuItemColorOrange_MouseEnter"
+                    Header="Orange"/>
+                </MenuItem>
+                <MenuItem
+                x:Name="menuItemGetInfo"
+                Click="menuItemGetInfo_Click"
+                MouseEnter="menuItemGetInfo_MouseEnter"
+                Header="Get information about developer"/>
+                <MenuItem
+                x:Name="menuItemCloseWindow"
+                    MouseEnter="menuItemCloseWindow_MouseEnter"
+                Click="menuItemCloseWindow_Click"
+                Header="Close window"/>
+            </Menu>
+
+            <ToolBar
+            VerticalAlignment="Top"
+            Height="30"
+            Grid.Row="1"
+            BorderThickness="1"
+            Background="White">
+                <Button
+                    x:Name="toolBarItemColorChange"
+                    Click="toolBarItemColorChange_Click">
+                    <Button.Content>
+                        <TextBlock
+                        Text="Change window color"/>
+                    </Button.Content>
+                </Button>
+
+                <Button
+                    MouseEnter="menuItemGetInfo_MouseEnter"
+                    Click="menuItemGetInfo_Click">
+                    <Button.Content>
+                        <TextBlock
+                        Text="Get information about developer"/>
+                    </Button.Content>
+                </Button>
+
+                <Button
+                    MouseEnter="menuItemCloseWindow_MouseEnter"
+                    Click="menuItemCloseWindow_Click">
+                    <Button.Content>
+                        <TextBlock
+                        Text="Close window"/>
+                    </Button.Content>
+                </Button>
+            </ToolBar>
+        </Grid>
+
+        <StatusBar
+            Grid.Row="2">
+            <TextBlock
+                x:Name="txtBlockProperty"/>
+            <Button
+                x:Name="btnToNext"
+                Click="btnToNext_Click"
+                Content="След. задание"/>
+        </StatusBar>
+    </Grid>
+</Window>
